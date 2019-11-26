@@ -1,0 +1,29 @@
+.btn{
+        padding: 10px 45px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        background:red;
+        position: relative;
+        z-index: 10;
+        border: 2px solid black;
+        &::after{
+                content:'';
+                position: absolute;
+                top:0;
+                z-index: -10;
+                left: 0;
+                background: green;
+                width: 0%;
+                height: 100%;
+                transition: all .5s;
+
+
+        }
+        &:hover{
+                color: #fff;
+                &::after{
+                        width: 100%;
+                }
+        }
+}
